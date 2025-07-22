@@ -1,26 +1,26 @@
 :root {
   --blue: #0038A8;
   --red: #CE1126;
-  --white: #FFFFFF;
+  --white: #ffffff;
   --yellow: #FCD116;
 
   --text-color: #333;
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family: 'Roboto', sans-serif;
 }
 
 body {
   font-family: var(--font-family);
   color: var(--text-color);
+  background-color: var(--white);
   margin: 0;
   padding: 0;
-  background-color: var(--white);
 }
 
 header {
   background-color: var(--blue);
   color: var(--white);
-  padding: 1rem;
   text-align: center;
+  padding: 1rem;
 }
 
 footer {
@@ -34,7 +34,7 @@ footer {
   width: 100%;
   height: auto;
   display: block;
-  border-bottom: 5px solid var(--yellow);
+  border-bottom: 4px solid var(--yellow);
 }
 
 main {
@@ -50,10 +50,34 @@ h2 {
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .weather-icon {
   width: 60px;
   height: 60px;
+  margin-bottom: 10px;
+}
+
+.emoji-icon::after {
+  content: ""; /* hidden on small screens */
+}
+
+/* Media Query for wider screens */
+@media (min-width: 600px) {
+  .weather {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .weather-icon {
+    display: none; /* hide SVG on wide view */
+  }
+
+  .emoji-icon::after {
+    content: "⛅";
+    margin-left: 0.5rem;
+  }
 }

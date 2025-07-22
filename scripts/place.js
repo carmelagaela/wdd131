@@ -4,7 +4,6 @@ const modifiedSpan = document.getElementById("lastModified");
 yearSpan.textContent = new Date().getFullYear();
 modifiedSpan.textContent = document.lastModified;
 
-// Static values
 const temperature = 8; // °C
 const windspeed = 10; // km/h
 
