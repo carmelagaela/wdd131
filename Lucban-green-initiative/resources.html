@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources & Education</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Lucban Green Initiative Logo" class="logo" />
+    <h1>Lucban Green Initiative</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Educational Infographics</h2>
+    <div class="tabs">
+      <button onclick="openLightbox('images/waste-segregation.jpg')">Proper Waste Segregation</button>
+      <button onclick="openLightbox('images/tree-planting-benefits.png')">Benefits of Tree Planting</button>
+      <button onclick="openLightbox('images/plastic-harms.png')">Harms of Plastic Usage</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lucban Green Initiative</p>
+    <a href="references.html">References</a>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Infographic" />
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
